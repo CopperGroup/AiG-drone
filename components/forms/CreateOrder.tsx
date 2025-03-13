@@ -148,7 +148,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
               translateY: position === "fixed" ? "-50%" : "0%",
             }}
             onAnimationComplete={() => setPosition("relative")}
-            className="bg-amber-50 rounded-full p-8 mb-8 overflow-hidden"
+            className="bg-sky-50 rounded-full p-8 mb-8 overflow-hidden"
           >
             <motion.div
               initial={{ y: -200, rotate: 0 }}
@@ -158,7 +158,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                 rotate: { delay: 1.5, duration: 0.5, ease: "easeInOut" },
               }}
             >
-              <Package className="w-16 h-16 text-amber-500" />
+              <Package className="w-16 h-16 text-sky-500" />
             </motion.div>
           </motion.div>
           <motion.div
@@ -191,12 +191,12 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
             >
               <Button
                 onClick={() => router.push(`/myOrders/${orderId}`)}
-                className="bg-amber-500 hover:bg-amber-600 px-6 py-3 rounded-lg text-base-medium text-white transition duration-300 w-full sm:w-auto"
+                className="bg-sky-500 hover:bg-sky-600 px-6 py-3 rounded-lg text-base-medium text-white transition duration-300 w-full sm:w-auto"
               >
                 {windowSize.width > 380 ? "Переглянути деталі замовлення" : "Переглянути деталі"}
               </Button>
               <div className="flex flex-1 justify-center items-center text-zinc-600 bg-white px-4 py-2 rounded-lg shadow-md max-[640px]:w-full border border-zinc-100">
-                <Phone className="w-5 h-5 mr-2 text-amber-500" />
+                <Phone className="w-5 h-5 mr-2 text-sky-500" />
                 <span className="text-base-medium">Очікуйте на дзвінок</span>
               </div>
             </motion.div>
@@ -207,7 +207,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.8 }}
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                  className="mt-12 text-body-semibold text-amber-500"
+                  className="mt-12 text-body-semibold text-sky-500"
                 >
                   Дякуємо за покупку!
                 </motion.div>
@@ -225,7 +225,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
                   <div className="bg-white p-6 rounded-lg shadow-sm border border-zinc-100">
                     <h2 className="text-heading3-bold mb-6 text-zinc-800 flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-2 text-amber-500" />
+                      <CheckCircle className="w-5 h-5 mr-2 text-sky-500" />
                       Особисті дані
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -288,7 +288,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
 
                   <div className="bg-white p-6 rounded-lg shadow-sm border border-zinc-100">
                     <h2 className="text-heading3-bold mb-6 text-zinc-800 flex items-center">
-                      <Truck className="w-5 h-5 mr-2 text-amber-500" />
+                      <Truck className="w-5 h-5 mr-2 text-sky-500" />
                       Доставка
                     </h2>
                     <FormField
@@ -359,7 +359,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
 
                   <div className="bg-white p-6 rounded-lg shadow-sm border border-zinc-100">
                     <h2 className="text-heading3-bold mb-6 text-zinc-800 flex items-center">
-                      <CreditCard className="w-5 h-5 mr-2 text-amber-500" />
+                      <CreditCard className="w-5 h-5 mr-2 text-sky-500" />
                       Оплата
                     </h2>
                     <FormField
@@ -386,7 +386,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
 
                   <div className="bg-white p-6 rounded-lg shadow-sm border border-zinc-100">
                     <h2 className="text-heading3-bold mb-6 text-zinc-800 flex items-center">
-                      <MessageSquare className="w-5 h-5 mr-2 text-amber-500" />
+                      <MessageSquare className="w-5 h-5 mr-2 text-sky-500" />
                       Коментар
                     </h2>
                     <FormField
@@ -406,7 +406,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
 
                   <Button
                     type="submit"
-                    className="w-full md:w-auto bg-amber-500 hover:bg-amber-600 text-base-medium text-white hover:shadow-md hover:shadow-amber-400/20 transition-all duration-300"
+                    className="w-full md:w-auto bg-sky-500 hover:bg-sky-600 text-base-medium text-white hover:shadow-md hover:shadow-sky-400/20 transition-all duration-300"
                   >
                     Підтвердити замовлення
                   </Button>
@@ -418,7 +418,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
               <div className="bg-white rounded-lg shadow-sm border border-zinc-100 overflow-hidden">
                 <div className="p-4 bg-zinc-50 border-b border-zinc-100">
                   <h2 className="text-heading4-medium flex items-center text-zinc-800">
-                    <ShoppingCart className="w-5 h-5 mr-2 text-amber-500" />
+                    <ShoppingCart className="w-5 h-5 mr-2 text-sky-500" />
                     Ваше замовлення
                   </h2>
                 </div>
@@ -438,7 +438,7 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                       <div className="flex-grow">
                         <h3 className="text-base-semibold text-zinc-800">{item.name}</h3>
                         <p className="text-small-regular text-zinc-500">Кількість: {item.quantity}</p>
-                        <p className="text-base-medium text-amber-500">
+                        <p className="text-base-medium text-sky-500">
                           {item.price.toFixed(2)}
                           {Store.currency_sign}
                         </p>
@@ -460,16 +460,16 @@ const CreateOrder = ({ userId, email }: { userId: string; email: string }) => {
                   </div>
                   <div className="mt-4 pt-4 border-t border-zinc-100 flex justify-between items-center">
                     <span className="text-body-semibold text-zinc-800">Загальна сума:</span>
-                    <span className="text-heading4-medium text-amber-500">
+                    <span className="text-heading4-medium text-sky-500">
                       {priceToPay}
                       {Store.currency_sign}
                     </span>
                   </div>
                 </div>
               </div>
-              <div className="mt-6 bg-amber-50 p-4 rounded-lg border border-amber-100">
+              <div className="mt-6 bg-sky-50 p-4 rounded-lg border border-sky-100">
                 <h3 className="text-heading4-medium mb-2 flex items-center text-zinc-800">
-                  <CheckCircle className="w-5 h-5 mr-2 text-amber-500" />
+                  <CheckCircle className="w-5 h-5 mr-2 text-sky-500" />
                   Гарантія безпеки
                 </h3>
                 <p className="text-base-regular text-zinc-600">
