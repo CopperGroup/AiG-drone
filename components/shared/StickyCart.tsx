@@ -41,11 +41,9 @@ export default function StickyCart() {
 
   return (
     <>
-      <motion.div
+      <div
         ref={cartButtonRef}
-        className="fixed bottom-8 right-8 z-[100] flex flex-col max-sm:bottom-4 max-sm:right-4"
-        animate={isAnimating ? { scale: [1, 1.1, 1] } : {}}
-        transition={{ duration: 0.3 }}
+        className="fixed bottom-8 right-8 z-[100] flex flex-col gap-4 max-sm:bottom-4 max-sm:right-4"
       >
         {/* Contact Button */}
         <ContactButton />
@@ -54,11 +52,12 @@ export default function StickyCart() {
         <motion.div
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          animate={isAnimating ? { scale: [1, 1.1, 1] } : {}}
           transition={{ type: "spring", stiffness: 400, damping: 17 }}
         >
           <Button
             onClick={toggleCart}
-            className="size-16 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 transition-all duration-300 ease-in-out hover:bg-white max-sm:size-14"
+            className="size-16 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-200 transition-all duration-300 ease-in-out hover:bg-white max-sm:size-14 relative"
           >
             <AnimatePresence>
               {cartData.length > 0 && (
@@ -76,7 +75,7 @@ export default function StickyCart() {
             <ShoppingBag className="w-8 h-8 text-black drop-shadow-sm max-sm:w-6 max-sm:h-6" />
           </Button>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* Cart Slide-in Panel */}
       <AnimatePresence>
