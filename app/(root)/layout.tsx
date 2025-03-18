@@ -11,14 +11,15 @@ import { getSession } from "@/lib/getServerSession";
 import { fetchUserByEmail } from "@/lib/actions/user.actions";
 import FacebookPixel from "@/components/pixel/FacebookPixel";
 import PageView from "@/components/pixel/PageView";
+import { Store } from "@/constants/store";
 
 
 const inter = Inter({ subsets: ["latin", "cyrillic"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Sveamoda",
-    template: "%s - Sveamoda"
+    default: Store.name,
+    template: `%s - ${Store.name}`
   },
   description: "",
   twitter: {
